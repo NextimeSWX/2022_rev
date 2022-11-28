@@ -7,19 +7,21 @@
  */
 
 #include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "stu.h"
 
-int main(void)
+int main(int a, char ** b)
 {
     int size_read;
-    char *buffer;
 
     size_read = 0;
-    buffer = malloc(sizeof(char)*50);
-    size_read = read(0, buffer, 49);
-    rev(size_read, buffer);
+
+    char * buffer = malloc(sizeof(char)*10);
+    size_read = read(0, buffer, 9);
     buffer[size_read] = '\0';
+    tr(b, buffer);
+    stu_puts(buffer);
     free(buffer);
-    return (0);
+    return (a);
 }

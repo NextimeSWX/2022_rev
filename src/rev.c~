@@ -6,21 +6,23 @@
  * description: rev.c
  */
 
+#include <stdio.h>
+
 #include <unistd.h>
 #include <stdlib.h>
 #include "stu.h"
 
 int rev(int size_read, char *buffer)
 {
-    char *str;
+    int i;
+    //int nb;
 
-    buffer[size_read -1] = '\0';
+    //nb = 0;
+    i = 0;
     if (!buffer)
-    return(0);
-    while(size_read >= 0) {
-        str = &buffer[size_read];
-        write(1, str, 1);
-        size_read -= 1;
-    } stu_putchar('\n');
-    return(0);
+        return(0);
+    while(i <= size_read) {
+        printf("%s\n", buffer);
+        i += 1;
+    }
 }
