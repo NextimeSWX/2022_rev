@@ -9,7 +9,6 @@
 #ifndef STU_H_
 #define STU_H_
 int rev(int nb, char *buffer);
-unsigned int stu_strlen(const char *str);
 void stu_putchar(char c);
 #include <unistd.h>
 #endif
