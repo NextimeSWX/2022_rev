@@ -18,6 +18,8 @@ int main(void)
     size_read = 0;
     buffer = malloc(sizeof(char)*50);
     size_read = read(0, buffer, 49);
+    if(!buffer)
+        return(0);
     rev(size_read, buffer);
     buffer[size_read] = '\0';
     free(buffer);

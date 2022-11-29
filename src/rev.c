@@ -10,17 +10,36 @@
 #include <stdlib.h>
 #include "stu.h"
 
+void put_rev(int i, char *str, char *buffer) {
+    while(i >= 0) {
+        str = &buffer[i];
+        write(1, str, 1);
+        i -= 1;
+    }
+}
+
 int rev(int size_read, char *buffer)
 {
     char *str;
+    int i;
 
-    buffer[size_read -1] = '\0';
-    if (!buffer)
-    return(0);
-    while(size_read >= 0) {
-        str = &buffer[size_read];
-        write(1, str, 1);
-        size_read -= 1;
-    } stu_putchar('\n');
+    i = 0;
+    str = 0;
+    if (size_read != '\n') {
+        buffer[size_read -1] = '\0';
+        i = size_read;
+        put_rev(i, str, buffer);
+    } else {
+            while(size_read >= i) {
+                while(buffer[i] != '\n' && buffer[i] != '\0') {
+                    i += 1;
+                }
+                put_rev(i, str, buffer);
+                i += 1;
+            }
+        }
+
+    stu_putchar('\n');
     return(0);
 }
+
