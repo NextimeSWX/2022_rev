@@ -8,7 +8,6 @@ NAME	=	rev
 
 SRCS	=	src/rev.c		\
 		src/main.c		\
-		src/stu_strlen.c	\
 		src/stu_putchar.c
 
 OBJS	=	$(SRCS:.c=.o)
