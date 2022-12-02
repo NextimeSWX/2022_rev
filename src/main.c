@@ -16,8 +16,8 @@ int main(void)
     char *buffer;
 
     size_read = 0;
-    buffer = malloc(sizeof(char)*50);
-    size_read = read(0, buffer, 49);
+    buffer = malloc(sizeof(char) * 1000);
+    size_read = read(0, buffer, 999);
     if(!buffer)
         return(0);
     rev(size_read, buffer);
