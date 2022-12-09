@@ -12,7 +12,7 @@ SRCS	=	src/rev.c		\
 
 OBJS	=	$(SRCS:.c=.o)
 
-CFLAGS	+=	-W -Wall -Wextra -Werror -IInclude/
+CFLAGS	+=	-W -Wall -Wextra -Werror -Iinclude/
 
 LDFLAGS	+=
 
