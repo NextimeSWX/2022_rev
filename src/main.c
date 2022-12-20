@@ -18,8 +18,8 @@ int main(void)
     size_read = 0;
     buffer = malloc(sizeof(char) * 1000);
     size_read = read(0, buffer, 999);
-    if(!buffer) {
-        return(0);
+    if (!buffer) {
+        return (0);
     }
     rev(size_read, buffer);
     buffer[size_read] = '\0';

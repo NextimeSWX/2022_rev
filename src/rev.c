@@ -14,7 +14,7 @@ void put_rev(int nb, char *str, char *buffer)
     int i;
 
     i = nb;
-    while(buffer[i] != '\n' && i >= 0) {
+    while (buffer[i] != '\n' && i >= 0) {
         str = &buffer[i];
         write(1, str, 1);
         i -= 1;
@@ -29,13 +29,13 @@ int rev(int size_read, char *buffer)
 
     str = 0;
     nb = 0;
-    while(size_read > nb) {
-        while(buffer[nb] != '\n' && buffer[nb] != '\0') {
+    while (size_read > nb) {
+        while (buffer[nb] != '\n' && buffer[nb] != '\0') {
             nb += 1;
         }
         nb -= 1;
         put_rev(nb, str, buffer);
         nb += 2;
     }
-    return(0);
+    return (0);
 }
